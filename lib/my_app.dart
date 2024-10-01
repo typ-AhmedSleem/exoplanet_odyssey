@@ -9,12 +9,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
-      designSize: const Size(375, 812),
+      designSize: const Size(430, 932),
       splitScreenMode: true,
       useInheritedMediaQuery: true,
       minTextAdapt: true,
       builder: (context, child) {
         return  MaterialApp(
+          theme: ThemeData.dark(),
           debugShowCheckedModeBanner: false,
           onGenerateRoute: (settings) =>AppRoute.onGenerate(settings),
         );

@@ -1,4 +1,4 @@
-
+import 'package:exoplanet_odyssey/features/splash/splash_view.dart';
 import 'package:flutter/material.dart';
 
 class AppRoutesName {
@@ -16,35 +16,35 @@ class AppRoute {
     switch (settings.name) {
       case AppRoutesName.splashScreen:
         return MaterialPageRoute(
-          builder: (context) => SplashView(),
+          builder: (context) => const SplashView(),
         );
-      case AppRoutesName.homelayout:
-        return MaterialPageRoute(
-          builder: (context) => HomeLayout(),
-        );
-      case AppRoutesName.onBoarding:
-        return MaterialPageRoute(
-          builder: (context) => OnBoarding(),
-        );
-      case AppRoutesName.login:
-        return MaterialPageRoute(
-          builder: (context) => const SignInView(),
-        );
-      case AppRoutesName.signUp:
-        return MaterialPageRoute(
-          builder: (context) => const SignupView(),
-        );
-      case AppRoutesName.forgetPass:
-        return MaterialPageRoute(
-          builder: (context) => const ForgetPage(),
-        );
-      case AppRoutesName.checkout:
-        return MaterialPageRoute(
-          builder: (context) => const CheckoutPage(),
-        );
+      // case AppRoutesName.homelayout:
+      //   return MaterialPageRoute(
+      //     builder: (context) => HomeLayout(),
+      //   );
+      // case AppRoutesName.onBoarding:
+      //   return MaterialPageRoute(
+      //     builder: (context) => OnBoarding(),
+      //   );
+      // case AppRoutesName.login:
+      //   return MaterialPageRoute(
+      //     builder: (context) => const SignInView(),
+      //   );
+      // case AppRoutesName.signUp:
+      //   return MaterialPageRoute(
+      //     builder: (context) => const SignupView(),
+      //   );
+      // case AppRoutesName.forgetPass:
+      //   return MaterialPageRoute(
+      //     builder: (context) => const ForgetPage(),
+      //   );
+      // case AppRoutesName.checkout:
+      //   return MaterialPageRoute(
+      //     builder: (context) => const CheckoutPage(),
+      //   );
       default:
         return MaterialPageRoute(
-          builder: (context) => unDefineRoute(),
+          builder: (context) => const SplashView(),
         );
     }
   }
