@@ -1,4 +1,3 @@
-import 'package:exoplanet_odyssey/core/utils/constants/colors.dart';
 import 'package:exoplanet_odyssey/core/utils/responsive_ui/widget_height.dart';
 import 'package:exoplanet_odyssey/core/utils/responsive_ui/widget_width.dart';
 import 'package:exoplanet_odyssey/features/widgets/background_image.dart';
@@ -17,7 +16,7 @@ class LoginView extends StatelessWidget {
               padding: EdgeInsets.symmetric(
                   horizontal: widgetWidth(context: context, width: 51.0),
                   vertical: widgetHeight(context: context, height: 78.0)),
-              child: Column(
+              child: const Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Text(

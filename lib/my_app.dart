@@ -1,6 +1,7 @@
 import 'package:exoplanet_odyssey/config/routes/app_routes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -14,11 +15,16 @@ class MyApp extends StatelessWidget {
       useInheritedMediaQuery: true,
       minTextAdapt: true,
       builder: (context, child) {
-        return  MaterialApp(
-          theme: ThemeData.dark(),
+        return MaterialApp(
+          theme: ThemeData.dark().copyWith(
+            textTheme: GoogleFonts.poppinsTextTheme(
+              ThemeData.dark().textTheme,
+            ),
+          ),
           debugShowCheckedModeBanner: false,
-          onGenerateRoute: (settings) =>AppRoute.onGenerate(settings),
+          onGenerateRoute: (settings) => AppRoute.onGenerate(settings),
         );
-      },);
+      },
+    );
   }
 }
