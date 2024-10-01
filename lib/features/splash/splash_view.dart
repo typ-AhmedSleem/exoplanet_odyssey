@@ -10,6 +10,7 @@ class SplashView extends StatelessWidget {
     return const Scaffold(
       body: BackgroundImage(
         backgroundImage: 'assets/images/splash/background.jpeg',
+        blurIntensity: 5.0,
         child: Logo(),
       ),
     );

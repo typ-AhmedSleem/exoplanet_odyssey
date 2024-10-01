@@ -45,7 +45,7 @@ class AppRoute {
       //   );
       default:
         return MaterialPageRoute(
-          builder: (context) => const LoginView(),
+          builder: (context) => const SplashView(),
         );
     }
   }
