@@ -1,3 +1,4 @@
+import 'package:exoplanet_odyssey/features/auth/login/login_view.dart';
 import 'package:exoplanet_odyssey/features/splash/splash_view.dart';
 import 'package:flutter/material.dart';
 
@@ -44,7 +45,7 @@ class AppRoute {
       //   );
       default:
         return MaterialPageRoute(
-          builder: (context) => const SplashView(),
+          builder: (context) => const LoginView(),
         );
     }
   }
