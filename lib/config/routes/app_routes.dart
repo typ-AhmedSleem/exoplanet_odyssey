@@ -1,5 +1,5 @@
-import 'package:exoplanet_odyssey/features/auth/login/login_view.dart';
-import 'package:exoplanet_odyssey/features/auth/register/register_view.dart';
+
+import 'package:exoplanet_odyssey/features/onboarding/onboarding_view.dart';
 import 'package:exoplanet_odyssey/features/splash/splash_view.dart';
 import 'package:flutter/material.dart';
 
@@ -46,7 +46,7 @@ class AppRoute {
       //   );
       default:
         return MaterialPageRoute(
-          builder: (context) => const RegisterView(),
+          builder: (context) => OnboardingScreen(),
         );
     }
   }
