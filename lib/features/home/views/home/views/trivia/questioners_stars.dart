@@ -12,7 +12,7 @@ class StarsAq extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        bottomNavigationBar: const NaviBar(),
+        bottomNavigationBar: NaviBar(currentIndex: 1),
         backgroundColor: Colors.black,
         appBar: PreferredSize(
             preferredSize: const Size.fromHeight(150),
