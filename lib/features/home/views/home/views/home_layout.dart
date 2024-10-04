@@ -65,7 +65,7 @@ class HomeLayout extends StatelessWidget {
           ],
         ),
       ),
-      bottomNavigationBar: const NaviBar(),
+      bottomNavigationBar: NaviBar(currentIndex: 0),
     );
   }
 }

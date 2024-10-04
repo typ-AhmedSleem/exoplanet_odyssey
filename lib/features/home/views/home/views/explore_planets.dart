@@ -15,7 +15,7 @@ class ExplorePlanets extends StatelessWidget {
           child: AppbarScreen(
               text1: 'Welcome Onboard', text2: 'Space Voyager!', imagebackgrond: 'assets/images/StockCake-Celestial Cosmic Voyage_1727724580.jpg',)),
 
-      bottomNavigationBar: const NaviBar(),
+      bottomNavigationBar: NaviBar(currentIndex: 0),
     );
   }
 }
