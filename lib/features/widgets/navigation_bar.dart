@@ -3,27 +3,30 @@ import 'package:flutter/material.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 
 class NaviBar extends StatefulWidget {
-  const NaviBar({super.key});
+   NaviBar({super.key, required this.currentIndex });
+
+  int currentIndex ;
 
   @override
   _NaviBarState createState() => _NaviBarState();
 }
 
 class _NaviBarState extends State<NaviBar> {
-  int _selectedIndex = 2;
+  int _selectedIndex = 0;
   final List<String> _pages = [
     AppRoutesName.homelayout,
     AppRoutesName.Trivia,
-    AppRoutesName.LeadboardScore,
     AppRoutesName.Notifications,
+    AppRoutesName.LeadboardScore,
     AppRoutesName.SettingsBar,
   ];
 
   void _onItemTapped(int index) {
     setState(() {
       _selectedIndex = index;
+      widget.currentIndex = index;
     });
-    Navigator.pushNamed(context, _pages[index]);
+    Navigator.pushReplacementNamed(context, _pages[index]);
   }
 
   @override
@@ -42,9 +45,9 @@ class _NaviBarState extends State<NaviBar> {
           Icon(Icons.settings, size: 30, color: Colors.white),
         ],
         onTap: (index) => _onItemTapped(index),
-        animationDuration: const Duration(milliseconds: 1),
+        animationDuration: const Duration(milliseconds: 250),
         animationCurve: Curves.easeInOut,
-        index: _selectedIndex,
+        index: widget.currentIndex,
       );
 
   }

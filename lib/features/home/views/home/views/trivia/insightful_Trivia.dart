@@ -56,7 +56,7 @@ class Trivia extends StatelessWidget {
           ],
         ),
       ),
-      bottomNavigationBar: const NaviBar(),
+      bottomNavigationBar:  NaviBar(currentIndex: 1),
     );
   }
 }

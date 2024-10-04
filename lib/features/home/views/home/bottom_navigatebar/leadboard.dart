@@ -8,7 +8,7 @@ class LeadboardScore extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
-      bottomNavigationBar: const NaviBar(),
+      bottomNavigationBar: NaviBar(currentIndex: 3),
       backgroundColor: Colors.black,
       appBar:  PreferredSize(
           preferredSize: const Size.fromHeight(150),

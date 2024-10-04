@@ -20,56 +20,56 @@ class buildContentCard extends StatelessWidget {
       margin: EdgeInsets.symmetric(vertical: 10),
       child: SizedBox(
         height: 180,
-        child: Stack(
-          children: [
-            Container(
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(12),
-                image: DecorationImage(
-                  image: AssetImage(imagePath),
-                  fit: BoxFit.cover,
+        child: GestureDetector(
+          onTap: (){newWidget();},
+          child: Stack(
+            children: [
+              Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(12),
+                  image: DecorationImage(
+                    image: AssetImage(imagePath),
+                    fit: BoxFit.cover,
+                  ),
                 ),
               ),
-            ),
-            Positioned(
-              bottom: 60,
-              left: 16,
-              child: Text(
-                type,
-                style: TextStyle(
-                  color: Colors.white70,
-                  fontSize: 25,
-                  fontWeight: FontWeight.bold,
+              Positioned(
+                bottom: 60,
+                left: 16,
+                child: Text(
+                  type,
+                  style: TextStyle(
+                    color: Colors.white70,
+                    fontSize: 25,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
               ),
-            ),
-            Positioned(
-              bottom: 25,
-              left: 16,
-              child: Text(
-                title,
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 28,
-                  fontWeight: FontWeight.bold,
+              Positioned(
+                bottom: 25,
+                left: 16,
+                child: Text(
+                  title,
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 28,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
               ),
-            ),
-            Positioned(
-              right: 14,
-              bottom: 20,
-              child: GestureDetector(
-                onTap: () {
-                  newWidget();
-                },
-                child: Icon(
-                  Icons.arrow_forward,
-                  color: Colors.white,
-                  size: 25,
+              Positioned(
+                right: 14,
+                bottom: 20,
+                child:
+                   Icon(
+                    Icons.arrow_forward,
+                    color: Colors.white,
+                    size: 25,
+                  ),
                 ),
-              ),
-            ),
-          ],
+
+            ],
+          ),
         ),
       ),
     );
