@@ -49,6 +49,14 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                   title: 'hhbgjmhjhk',
                   description: 'jfjkkhjgfhmhjdf,k',
                 ),
+                PageViewChild(
+                  title: 'hhbgjmhjhk',
+                  description: 'jfjkkhjgfhmhjdf,k',
+                ),
+                PageViewChild(
+                  title: 'hhbgjmhjhk',
+                  description: 'jfjkkhjgfhmhjdf,k',
+                ),
               ],
             ),
           ),
@@ -57,17 +65,23 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
             children: List.generate(
                 3,
                 (index) => Center(
-                        child: BuildDot(
-                      index,
-                      listIndex: index,
-                      currentPage: _currentPage,
-                      // onTap: () {_pageController.animateToPage(index,
-                      //     duration: const Duration(milliseconds: 500),
-                      //     curve: Curves.easeInOut
-                      // );},
-                      onTap: () => Navigator.pushReplacementNamed(
-                          context, AppRoutesName.homelayout),
-                    ))),
+                        child: BuildDot(index,
+                            listIndex: index, currentPage: _currentPage,
+                            // onTap: () {_pageController.animateToPage(index,
+                            //     duration: const Duration(milliseconds: 500),
+                            //     curve: Curves.easeInOut
+                            // );},
+                            onTap: () {
+                      if (index == 2) {
+                        Navigator.pushReplacementNamed(
+                            context, AppRoutesName.homelayout);
+                      }
+                      {
+                        _pageController.animateToPage(index,
+                            duration: const Duration(milliseconds: 500),
+                            curve: Curves.easeInOut);
+                      }
+                    }))),
           ),
           SizedBox(
             height: widgetHeight(context: context, height: 85),
