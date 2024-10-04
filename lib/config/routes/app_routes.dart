@@ -1,12 +1,10 @@
-
-
 import 'package:exoplanet_odyssey/core/components/undefined_route.dart';
 import 'package:exoplanet_odyssey/features/home/views/home/bottom_navigatebar/leadboard.dart';
 import 'package:exoplanet_odyssey/features/home/views/home/bottom_navigatebar/settings.dart';
 import 'package:exoplanet_odyssey/features/home/views/home/views/3dmodel_Visualize.dart';
 import 'package:exoplanet_odyssey/features/home/views/home/views/easy_Educational.dart';
 import 'package:exoplanet_odyssey/features/home/views/home/views/explore_planets.dart';
-import 'package:exoplanet_odyssey/features/home/views/home/views/home.dart';
+import 'package:exoplanet_odyssey/features/home/views/home/views/home_layout.dart';
 import 'package:exoplanet_odyssey/features/home/views/home/views/trivia/insightful_Trivia.dart';
 import 'package:exoplanet_odyssey/features/home/views/home/views/trivia/levelnumber/LevelOne.dart';
 import 'package:exoplanet_odyssey/features/home/views/home/views/trivia/levelnumber/LevelThree.dart';
@@ -17,12 +15,14 @@ import 'package:exoplanet_odyssey/features/home/views/home/views/trivia/planetsa
 import 'package:exoplanet_odyssey/features/home/views/home/views/trivia/questioners_galaxies.dart';
 import 'package:exoplanet_odyssey/features/home/views/home/views/trivia/questioners_stars.dart';
 import 'package:exoplanet_odyssey/features/home/views/home/views/trivia/quition_widget/quetion_form.dart';
-import 'package:exoplanet_odyssey/features/home/views/notifications/notification.dart';
+import 'package:exoplanet_odyssey/features/home/views/home/notifications/notification.dart';
+import 'package:exoplanet_odyssey/features/onboarding/onboarding_view.dart';
+import 'package:exoplanet_odyssey/features/splash/splash_view.dart';
 import 'package:flutter/material.dart';
 
 class AppRoutesName {
-  static const String splashScreen = "splashScreen";
-  static const String homelayout = "/";
+  static const String splashScreen = "/";
+  static const String homelayout = "homelayout";
   static const String onBoarding = "onBoarding";
   static const String login = "login";
   static const String signUp = "signUp";
@@ -34,28 +34,35 @@ class AppRoutesName {
   static const String SettingsBar = 'settingsBar';
   static const String LeadboardScore = 'LeadboardScore';
   static const String PlantesAq = 'plantesAq';
-  static const String  StarsAq= 'starsAq';
-  static const String  GalaxiesAq= 'galaxiesAq';
-  static const String  ChooseLevel = 'chooselevel';
-  static const String Notifications='notifications';
-  static const String QuestionForm= 'QuestionForm';
-  static const String LevelOne= 'LevelOne';
-  static const String LevelTow= 'LevelTow';
-  static const String LevelThree= 'LevelThree';
-  static const String Levelfour= 'Levelfour';
-
+  static const String StarsAq = 'starsAq';
+  static const String GalaxiesAq = 'galaxiesAq';
+  static const String ChooseLevel = 'chooselevel';
+  static const String Notifications = 'notifications';
+  static const String QuestionForm = 'QuestionForm';
+  static const String LevelOne = 'LevelOne';
+  static const String LevelTow = 'LevelTow';
+  static const String LevelThree = 'LevelThree';
+  static const String Levelfour = 'Levelfour';
 }
+
 class AppRoute {
   static Route onGenerate(RouteSettings settings) {
     switch (settings.name) {
+      case AppRoutesName.splashScreen:
+        return MaterialPageRoute(builder: (context) => const SplashView());
+
+      case AppRoutesName.onBoarding:
+        return MaterialPageRoute(
+            builder: (context) => const OnboardingScreen());
+
       case AppRoutesName.homelayout:
         return MaterialPageRoute(
           builder: (context) => HomeLayout(),
         );
-  case AppRoutesName.ExplorePlanets:
-  return MaterialPageRoute(
-  builder: (context) => const ExplorePlanets(),
-  );
+      case AppRoutesName.ExplorePlanets:
+        return MaterialPageRoute(
+          builder: (context) => const ExplorePlanets(),
+        );
       case AppRoutesName.ModelVisualize:
         return MaterialPageRoute(
           builder: (context) => const ModelVisualize(),
@@ -95,7 +102,9 @@ class AppRoute {
         );
       case AppRoutesName.QuestionForm:
         return MaterialPageRoute(
-          builder: (context) => QuestionForm(questions: const [],),
+          builder: (context) => QuestionForm(
+            questions: const [],
+          ),
         );
       case AppRoutesName.ChooseLevel:
         return MaterialPageRoute(

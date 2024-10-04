@@ -1,3 +1,4 @@
+import 'package:exoplanet_odyssey/core/utils/constants/colors.dart';
 import 'package:exoplanet_odyssey/core/utils/responsive_ui/widget_height.dart';
 import 'package:exoplanet_odyssey/core/utils/responsive_ui/widget_width.dart';
 import 'package:exoplanet_odyssey/features/widgets/background_image.dart';
@@ -17,57 +18,62 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: BackgroundImage(
-          blurIntensity: 5.0,
-          backgroundImage: 'assets/images/onboarding/page1.png',
-          child: Column(children: [
-            // Skip Button
-            Container(
-              alignment: Alignment.topRight,
-
-              child: TextButton(
-                onPressed: () {
-                  // Skip to last onboarding screen or finish
-                },
-                child: const Row(
-                  children: [
-                     Text(
-                      'Skip',
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontWeight: FontWeight.bold,
-                      ),
-
+        body: BackgroundImage(
+            blurIntensity: 5.0,
+            backgroundImage: 'assets/images/onboarding/page1.png',
+            child: Column(
+              children: [
+                // Skip Button
+                Container(
+                  width: widgetWidth(context: context, width: 100),
+                  height: widgetHeight(context: context, height: 20),
+                  color: kPrimaryColor,
+                  alignment: Alignment.topRight,
+                  child: TextButton(
+                    onPressed: () {
+                      // Skip to last onboarding screen or finish
+                    },
+                    child: const Row(
+                      children: [
+                        Text(
+                          'Skip',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        Icon(
+                          Icons.arrow_forward,
+                          color: Colors.white,
+                        ),
+                      ],
                     ),
-                    Icon(
-                      Icons.arrow_forward,
-                      color: Colors.white,
-                    ),
-                  ],
-                ),
-              ),
-            ),
-            )
-            Positioned(
-              top: 50.0,
-              right: 20.0,
-              child: TextButton(
-                onPressed: () {
-                  // Skip to last onboarding screen or finish
-                },
-                child: const Text(
-                  'Skip',
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontWeight: FontWeight.bold,
                   ),
                 ),
-              ),
-            ),
-          ])),
-    );
-  }
-}
+              ],
+            )));
+
+//             )
+//             Positioned(
+//               top: 50.0,
+//               right: 20.0,
+//               child: TextButton(
+//                 onPressed: () {
+//                   // Skip to last onboarding screen or finish
+//                 },
+//                 child: const Text(
+//                   'Skip',
+//                   style: TextStyle(
+//                     color: Colors.white,
+//                     fontWeight: FontWeight.bold,
+//                   ),
+//                 ),
+//               ),
+//             ),
+//           ])),
+//     );
+//   }
+// }
 //       body: Stack(
 //         children: [
 //           // Background image
@@ -204,3 +210,5 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
 //               ));
 //   }
 // }
+  }
+}
