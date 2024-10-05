@@ -6,7 +6,7 @@ class BackgroundImage extends StatelessWidget {
     super.key,
     required this.backgroundImage,
     required this.child,
-    this.blurIntensity = 0,
+    this.blurIntensity = 7.5,
   });
 
   final String backgroundImage;
@@ -25,7 +25,7 @@ class BackgroundImage extends StatelessWidget {
             image: DecorationImage(
               image: AssetImage(backgroundImage),
               fit: BoxFit.cover,
-              opacity: 0.66,
+              opacity: 0.8,
             ),
           ),
         ),

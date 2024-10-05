@@ -1,4 +1,5 @@
 import 'package:exoplanet_odyssey/config/routes/app_routes.dart';
+import 'package:exoplanet_odyssey/core/utils/shared_prefs.dart';
 import 'package:exoplanet_odyssey/features/splash/widgets/logo.dart';
 import 'package:exoplanet_odyssey/features/widgets/background_image.dart';
 import 'package:flutter/material.dart';
@@ -18,8 +19,13 @@ class _SplashViewState extends State<SplashView> {
   }
 
   Future<void> _navigateToNextScreen() async {
-    await Future.delayed(const Duration(seconds: 3), () {
-      Navigator.pushReplacementNamed(context,  AppRoutesName.onBoarding);
+    await Future.delayed(const Duration(seconds: 3), () async {
+      if (context.mounted) return;
+      if (await SharedPrefs.isOnboardingDone()) {
+        Navigator.pushReplacementNamed(context, AppRoutesName.homelayout);
+      } else {
+        Navigator.pushReplacementNamed(context, AppRoutesName.onBoarding);
+      }
     });
   }
 

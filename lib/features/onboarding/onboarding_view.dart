@@ -1,6 +1,7 @@
 import 'package:exoplanet_odyssey/config/routes/app_routes.dart';
 import 'package:exoplanet_odyssey/core/utils/responsive_ui/widget_height.dart';
 import 'package:exoplanet_odyssey/core/utils/responsive_ui/widget_width.dart';
+import 'package:exoplanet_odyssey/core/utils/shared_prefs.dart';
 import 'package:exoplanet_odyssey/features/onboarding/widgets/build_dot.dart';
 import 'package:exoplanet_odyssey/features/onboarding/widgets/page_view_child.dart';
 import 'package:exoplanet_odyssey/features/onboarding/widgets/skib_button.dart';
@@ -46,16 +47,19 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
               },
               children: const [
                 PageViewChild(
-                  title: 'hhbgjmhjhk',
-                  description: 'jfjkkhjgfhmhjdf,k',
+                  title: 'Explore Planets',
+                  description:
+                      'Embark on a celestial journey to explore the captivating realms of planets. From the fiery surface of Venus to the icy mysteries of Neptune, this section is your portal to unravel the diverse landscapes and enigmas',
                 ),
                 PageViewChild(
-                  title: 'hhbgjmhjhk',
-                  description: 'jfjkkhjgfhmhjdf,k',
+                  title: 'Take Challenges in Trivia',
+                  description:
+                      'Test your planetary knowledge and challenge your intellect with our captivating quizzes.',
                 ),
                 PageViewChild(
-                  title: 'hhbgjmhjhk',
-                  description: 'jfjkkhjgfhmhjdf,k',
+                  title: 'Enjoy Horizons in 3D',
+                  description:
+                      'Explore the Marvels of Galaxies: Dive into a cosmic journey to learn about the awe-inspiring galaxies that populate our universe.',
                 ),
               ],
             ),
@@ -71,8 +75,9 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                             //     duration: const Duration(milliseconds: 500),
                             //     curve: Curves.easeInOut
                             // );},
-                            onTap: () {
+                            onTap: () async {
                       if (index == 2) {
+                        await SharedPrefs.finishOnboarding();
                         Navigator.pushReplacementNamed(
                             context, AppRoutesName.homelayout);
                       } else {

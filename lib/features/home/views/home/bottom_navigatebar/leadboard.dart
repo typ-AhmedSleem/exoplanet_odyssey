@@ -7,13 +7,16 @@ class LeadboardScore extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
+    return Scaffold(
       bottomNavigationBar: NaviBar(currentIndex: 3),
       backgroundColor: Colors.black,
-      appBar:  PreferredSize(
+      appBar: PreferredSize(
           preferredSize: const Size.fromHeight(150),
-          child: AppbarScreen(text1: 'Let’s answer', text2: 'Q&A Polls', imagebackgrond: 'assets/images/StockCake-Celestial Cosmic Voyage_1727724580.jpg')),
-
+          child: AppbarScreen(
+              text1: 'Trivia',
+              text2: 'Leaderboard',
+              imagebackgrond:
+                  'assets/images/StockCake-Celestial Cosmic Voyage_1727724580.jpg')),
       body: const Center(
         child: Text(
           'This is the Leaderboard screen.',

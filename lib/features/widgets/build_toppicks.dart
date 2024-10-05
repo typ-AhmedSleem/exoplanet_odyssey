@@ -7,31 +7,19 @@ class buildTopPicksSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
+    return const Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              'Top picks',
-              style: TextStyle(
-                fontSize: 24,
-                fontWeight: FontWeight.bold,
-                color: Colors.white,
-              ),
-            ),
-            Text(
-              'Let\'s explore our programs',
+              'Explore our programs',
               style: TextStyle(
                 color: Colors.white,
               ),
             ),
           ],
-        ),
-        Icon(
-          Icons.notifications,
-          color: Colors.white,
         ),
       ],
     );

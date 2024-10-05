@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 
 class AppbarScreen extends StatelessWidget {
-  AppbarScreen({super.key, required this.text1, required this.text2, required this.imagebackgrond});
+  AppbarScreen(
+      {super.key,
+      required this.text1,
+      required this.text2,
+      required this.imagebackgrond});
   final String text1;
   final String text2;
   final String imagebackgrond;
@@ -11,19 +15,18 @@ class AppbarScreen extends StatelessWidget {
       children: [
         Container(
           width: double.infinity,
-          height: 250,
-
-          child: Image.asset(
-            imagebackgrond,
-            fit: BoxFit.cover,
-
-          ),
+          height: 100,
+          child: imagebackgrond.isNotEmpty
+              ? Image.asset(
+                  imagebackgrond,
+                  fit: BoxFit.cover,
+                )
+              : Container(),
         ),
         Container(
           width: double.infinity,
-          height: 250,
+          height: 100,
           decoration: BoxDecoration(
-
             gradient: LinearGradient(
               begin: Alignment.topCenter,
               end: Alignment.bottomCenter,
@@ -32,33 +35,33 @@ class AppbarScreen extends StatelessWidget {
                 Colors.black.withOpacity(0.9),
                 Colors.black,
               ],
-              stops: [0.0, 0.9, 1.0],
+              stops: const [0.0, 0.9, 1.0],
             ),
           ),
         ),
         Padding(
-          padding: EdgeInsets.all(16.0),
+          padding: const EdgeInsets.symmetric(vertical: 5.0, horizontal: 16.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              SizedBox(height: 60),
+              const SizedBox(height: 50),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      SizedBox(height: 8),
+                      const SizedBox(height: 8),
                       Text(
                         text1,
-                        style: TextStyle(
+                        style: const TextStyle(
                           color: Colors.white,
                           fontSize: 20,
                         ),
                       ),
                       Text(
                         text2,
-                        style: TextStyle(
+                        style: const TextStyle(
                           fontSize: 30,
                           fontWeight: FontWeight.bold,
                           color: Colors.white,
@@ -66,22 +69,22 @@ class AppbarScreen extends StatelessWidget {
                       ),
                     ],
                   ),
-                  Container(
-                    width: 70,
-                    height: 70,
-                    decoration: BoxDecoration(
-                      shape: BoxShape.circle,
-                      border: Border.all(
-                        color: Colors.white,
-                        width: 3,
-                      ),
-                    ),
-                    child: CircleAvatar(
-                      backgroundImage: AssetImage(
-                          'assets/images/StockCake-Astronaut Cosmic Journey_1727724113.jpg'),
-                      radius: 24,
-                    ),
-                  )
+                  // Container(
+                  //   width: 70,
+                  //   height: 70,
+                  //   decoration: BoxDecoration(
+                  //     shape: BoxShape.circle,
+                  //     border: Border.all(
+                  //       color: Colors.white,
+                  //       width: 3,
+                  //     ),
+                  //   ),
+                  //   child: CircleAvatar(
+                  //     backgroundImage: AssetImage(
+                  //         'assets/images/StockCake-Astronaut Cosmic Journey_1727724113.jpg'),
+                  //     radius: 24,
+                  //   ),
+                  // )
                 ],
               ),
             ],
