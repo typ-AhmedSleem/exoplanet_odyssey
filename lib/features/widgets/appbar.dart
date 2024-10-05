@@ -69,22 +69,6 @@ class AppbarScreen extends StatelessWidget {
                       ),
                     ],
                   ),
-                  // Container(
-                  //   width: 70,
-                  //   height: 70,
-                  //   decoration: BoxDecoration(
-                  //     shape: BoxShape.circle,
-                  //     border: Border.all(
-                  //       color: Colors.white,
-                  //       width: 3,
-                  //     ),
-                  //   ),
-                  //   child: CircleAvatar(
-                  //     backgroundImage: AssetImage(
-                  //         'assets/images/StockCake-Astronaut Cosmic Journey_1727724113.jpg'),
-                  //     radius: 24,
-                  //   ),
-                  // )
                 ],
               ),
             ],

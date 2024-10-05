@@ -4,7 +4,7 @@ import 'package:exoplanet_odyssey/features/auth/presentation/register/register_v
 import 'package:exoplanet_odyssey/features/home/views/home/bottom_navigatebar/leadboard.dart';
 import 'package:exoplanet_odyssey/features/home/views/home/bottom_navigatebar/settings.dart';
 import 'package:exoplanet_odyssey/features/home/views/home/views/3dmodel_Visualize.dart';
-import 'package:exoplanet_odyssey/features/home/views/home/views/easy_Educational.dart';
+import 'package:exoplanet_odyssey/features/home/views/home/views/education/easy_Educational.dart';
 import 'package:exoplanet_odyssey/features/home/views/home/views/explore_planets.dart';
 import 'package:exoplanet_odyssey/features/home/views/home/views/home_layout.dart';
 import 'package:exoplanet_odyssey/features/home/views/home/views/trivia/insightful_Trivia.dart';
@@ -22,6 +22,9 @@ import 'package:exoplanet_odyssey/features/onboarding/onboarding_view.dart';
 import 'package:exoplanet_odyssey/features/splash/splash_view.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+
+import '../../features/home/views/home/views/education/video_edu.dart';
+import '../../features/widgets/educational_card.dart';
 
 class AppRoutesName {
   static const String splashScreen = "/";
@@ -46,6 +49,8 @@ class AppRoutesName {
   static const String LevelTow = 'LevelTow';
   static const String LevelThree = 'LevelThree';
   static const String Levelfour = 'Levelfour';
+  static const String EducationalCard='EducationalCard';
+  static const String YoutubeVideoPlayer='YoutubeVideoPlayer';
 }
 
 class AppRoute {
@@ -89,7 +94,7 @@ class AppRoute {
         );
       case AppRoutesName.Educational:
         return MaterialPageRoute(
-          builder: (context) => const Educational(),
+          builder: (context) =>  Educational(),
         );
       case AppRoutesName.SettingsBar:
         return MaterialPageRoute(
@@ -142,6 +147,11 @@ class AppRoute {
         return MaterialPageRoute(
           builder: (context) => const Levelfour(),
         );
+      case AppRoutesName.YoutubeVideoPlayer:
+        return MaterialPageRoute(
+          builder: (context) =>  YoutubeVideoPlayer(),
+        );
+
 
       default:
         return MaterialPageRoute(

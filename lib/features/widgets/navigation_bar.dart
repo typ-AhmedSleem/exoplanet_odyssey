@@ -15,7 +15,7 @@ class _NaviBarState extends State<NaviBar> {
   final List<String> _pages = [
     AppRoutesName.homelayout,
     AppRoutesName.Trivia,
-    AppRoutesName.Notifications,
+    AppRoutesName.Educational,
     AppRoutesName.LeadboardScore,
     AppRoutesName.SettingsBar,
   ];
