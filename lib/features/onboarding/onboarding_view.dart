@@ -75,8 +75,8 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                       if (index == 2) {
                         Navigator.pushReplacementNamed(
                             context, AppRoutesName.homelayout);
-                      }
-                      {
+                      } else {
+                        index++;
                         _pageController.animateToPage(index,
                             duration: const Duration(milliseconds: 500),
                             curve: Curves.easeInOut);

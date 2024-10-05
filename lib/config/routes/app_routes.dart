@@ -1,4 +1,6 @@
 import 'package:exoplanet_odyssey/core/components/undefined_route.dart';
+import 'package:exoplanet_odyssey/features/auth/presentation/login/login_view.dart';
+import 'package:exoplanet_odyssey/features/auth/presentation/register/register_view.dart';
 import 'package:exoplanet_odyssey/features/home/views/home/bottom_navigatebar/leadboard.dart';
 import 'package:exoplanet_odyssey/features/home/views/home/bottom_navigatebar/settings.dart';
 import 'package:exoplanet_odyssey/features/home/views/home/views/3dmodel_Visualize.dart';
@@ -25,7 +27,7 @@ class AppRoutesName {
   static const String homelayout = "homelayout";
   static const String onBoarding = "onBoarding";
   static const String login = "login";
-  static const String signUp = "signUp";
+  static const String register = "register";
   static const String forgetPass = "forgetPass";
   static const String ExplorePlanets = 'explorePlanets';
   static const String ModelVisualize = '3dmodelVisualize';
@@ -54,6 +56,12 @@ class AppRoute {
       case AppRoutesName.onBoarding:
         return MaterialPageRoute(
             builder: (context) => const OnboardingScreen());
+
+      case AppRoutesName.login:
+        return MaterialPageRoute(builder: (context) => const LoginView());
+
+      case AppRoutesName.register:
+        return MaterialPageRoute(builder: (context) => const RegisterView());
 
       case AppRoutesName.homelayout:
         return MaterialPageRoute(

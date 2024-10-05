@@ -1,4 +1,3 @@
-
 import 'package:exoplanet_odyssey/config/routes/app_routes.dart';
 import 'package:exoplanet_odyssey/features/widgets/appbar.dart';
 import 'package:exoplanet_odyssey/features/widgets/build_search_Field.dart';
@@ -16,7 +15,9 @@ class HomeLayout extends StatelessWidget {
         preferredSize: const Size.fromHeight(150),
         child: AppbarScreen(
           text1: 'Welcome Onboard',
-          text2: 'Space Voyager!', imagebackgrond: 'assets/images/StockCake-Celestial Cosmic Voyage_1727724580.jpg',
+          text2: 'Space Voyager!',
+          imagebackgrond:
+              'assets/images/StockCake-Celestial Cosmic Voyage_1727724580.jpg',
         ),
       ),
       body: Padding(
@@ -50,7 +51,7 @@ class HomeLayout extends StatelessWidget {
               type: 'Insightful',
               title: 'Q&A Trivia',
               newWidget: () {
-                Navigator.pushNamed(context, AppRoutesName.Trivia);
+                Navigator.pushNamed(context, AppRoutesName.login);
               },
             ),
             buildContentCard(

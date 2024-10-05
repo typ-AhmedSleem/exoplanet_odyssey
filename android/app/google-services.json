@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1002810793577",
+    "project_id": "exoplanet-odyssey",
+    "storage_bucket": "exoplanet-odyssey.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1002810793577:android:55d45f56773b7575d9ccf8",
+        "android_client_info": {
+          "package_name": "com.example.exoplanet_odyssey"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAXzYfn7aKiykJB5z9qeuMnAt7UM1GtJVE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
