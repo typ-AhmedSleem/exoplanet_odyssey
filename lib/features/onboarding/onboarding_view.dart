@@ -1,6 +1,7 @@
 import 'package:exoplanet_odyssey/config/routes/app_routes.dart';
 import 'package:exoplanet_odyssey/core/utils/responsive_ui/widget_height.dart';
 import 'package:exoplanet_odyssey/core/utils/responsive_ui/widget_width.dart';
+import 'package:exoplanet_odyssey/core/utils/shared_prefs.dart';
 import 'package:exoplanet_odyssey/features/onboarding/widgets/build_dot.dart';
 import 'package:exoplanet_odyssey/features/onboarding/widgets/page_view_child.dart';
 import 'package:exoplanet_odyssey/features/onboarding/widgets/skib_button.dart';
@@ -74,8 +75,9 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                             //     duration: const Duration(milliseconds: 500),
                             //     curve: Curves.easeInOut
                             // );},
-                            onTap: () {
+                            onTap: () async {
                       if (index == 2) {
+                        await SharedPrefs.finishOnboarding();
                         Navigator.pushReplacementNamed(
                             context, AppRoutesName.homelayout);
                       } else {
