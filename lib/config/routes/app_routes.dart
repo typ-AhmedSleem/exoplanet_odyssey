@@ -59,10 +59,10 @@ class AppRoute {
             builder: (context) => const OnboardingScreen());
 
       case AppRoutesName.login:
-        return MaterialPageRoute(builder: (context) => const LoginView());
+        return MaterialPageRoute(builder: (context) => const LoginPage());
 
       case AppRoutesName.register:
-        return MaterialPageRoute(builder: (context) => const RegisterView());
+        return MaterialPageRoute(builder: (context) => const RegisterPage());
 
       case AppRoutesName.homelayout:
         return MaterialPageRoute(
@@ -93,7 +93,7 @@ class AppRoute {
         );
       case AppRoutesName.SettingsBar:
         return MaterialPageRoute(
-          builder: (context) => const SettingsBar(),
+          builder: (context) => const RegisterPage(),
         );
       case AppRoutesName.LeadboardScore:
         return MaterialPageRoute(
