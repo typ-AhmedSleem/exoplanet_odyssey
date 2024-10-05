@@ -21,11 +21,9 @@ class HomeLayout extends StatelessWidget {
         ),
       ),
       body: Padding(
-        padding: const EdgeInsets.all(20.0),
+        padding: const EdgeInsets.only(bottom: 20.0, right: 20.0, left: 20.0),
         child: ListView(
           children: [
-            const buildSearchField(),
-            const SizedBox(height: 20),
             const buildTopPicksSection(),
             const SizedBox(height: 10),
             buildContentCard(
@@ -51,7 +49,7 @@ class HomeLayout extends StatelessWidget {
               type: 'Challenge',
               title: 'Yourself in Trivia',
               newWidget: () {
-                Navigator.pushNamed(context, AppRoutesName.login);
+                Navigator.pushNamed(context, AppRoutesName.Trivia);
               },
             ),
             buildContentCard(

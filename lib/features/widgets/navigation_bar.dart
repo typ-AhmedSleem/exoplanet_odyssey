@@ -12,7 +12,6 @@ class NaviBar extends StatefulWidget {
 }
 
 class _NaviBarState extends State<NaviBar> {
-  int _selectedIndex = 0;
   final List<String> _pages = [
     AppRoutesName.homelayout,
     AppRoutesName.Trivia,
@@ -24,7 +23,6 @@ class _NaviBarState extends State<NaviBar> {
   void _onItemTapped(int index) {
     setState(() {
       if (widget.currentIndex != index) {
-        _selectedIndex = index;
         widget.currentIndex = index;
         Navigator.pushReplacementNamed(context, _pages[index]);
       }
@@ -35,8 +33,8 @@ class _NaviBarState extends State<NaviBar> {
   Widget build(BuildContext context) {
     return CurvedNavigationBar(
       backgroundColor: Colors.transparent,
-      color: Colors.white.withOpacity(0.6),
-      buttonBackgroundColor: Colors.white.withOpacity(0.6),
+      color: Colors.accents.first.withOpacity(0.6),
+      buttonBackgroundColor: Colors.accents.first.withOpacity(0.6),
       height: 60.0,
       items: const <Widget>[
         Icon(Icons.home, size: 30, color: Colors.white),
