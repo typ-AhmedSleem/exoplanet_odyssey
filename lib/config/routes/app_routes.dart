@@ -73,7 +73,7 @@ class AppRoute {
         );
       case AppRoutesName.ModelVisualize:
         return MaterialPageRoute(
-          builder: (context) => const ModelVisualize(),
+          builder: (context) => ModelVisualize(),
         );
       case AppRoutesName.Trivia:
         return MaterialPageRoute(
