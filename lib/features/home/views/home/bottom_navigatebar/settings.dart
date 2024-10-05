@@ -7,9 +7,11 @@ class SettingsBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: NaviBar(currentIndex: 4,),
+      bottomNavigationBar: NaviBar(
+        currentIndex: 4,
+      ),
       backgroundColor: Colors.black,
-      appBar:AppBar(),
+      appBar: AppBar(),
     );
   }
 }

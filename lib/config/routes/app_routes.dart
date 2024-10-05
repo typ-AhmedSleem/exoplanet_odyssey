@@ -20,6 +20,7 @@ import 'package:exoplanet_odyssey/features/home/views/home/views/trivia/quition_
 import 'package:exoplanet_odyssey/features/home/views/home/notifications/notification.dart';
 import 'package:exoplanet_odyssey/features/onboarding/onboarding_view.dart';
 import 'package:exoplanet_odyssey/features/splash/splash_view.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
 import '../../features/home/views/home/views/education/video_edu.dart';
@@ -63,10 +64,10 @@ class AppRoute {
             builder: (context) => const OnboardingScreen());
 
       case AppRoutesName.login:
-        return MaterialPageRoute(builder: (context) => const LoginView());
+        return MaterialPageRoute(builder: (context) => const LoginPage());
 
       case AppRoutesName.register:
-        return MaterialPageRoute(builder: (context) => const RegisterView());
+        return MaterialPageRoute(builder: (context) => const RegisterPage());
 
       case AppRoutesName.homelayout:
         return MaterialPageRoute(
@@ -78,11 +79,18 @@ class AppRoute {
         );
       case AppRoutesName.ModelVisualize:
         return MaterialPageRoute(
-          builder: (context) => const ModelVisualize(),
+          builder: (context) => ModelVisualize(),
         );
       case AppRoutesName.Trivia:
         return MaterialPageRoute(
-          builder: (context) => const Trivia(),
+          builder: (context) {
+            final loggedIn = FirebaseAuth.instance.currentUser != null;
+            if (loggedIn) {
+              return const Trivia();
+            } else {
+              return const LoginView();
+            }
+          },
         );
       case AppRoutesName.Educational:
         return MaterialPageRoute(
@@ -90,7 +98,7 @@ class AppRoute {
         );
       case AppRoutesName.SettingsBar:
         return MaterialPageRoute(
-          builder: (context) => const SettingsBar(),
+          builder: (context) => const RegisterPage(),
         );
       case AppRoutesName.LeadboardScore:
         return MaterialPageRoute(
