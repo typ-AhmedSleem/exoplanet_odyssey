@@ -7,7 +7,7 @@ class Notifications extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: NaviBar(currentIndex: 2),
+
       backgroundColor: Colors.black,
       appBar:AppBar(),
     );

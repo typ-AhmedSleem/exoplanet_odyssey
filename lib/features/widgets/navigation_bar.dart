@@ -16,7 +16,7 @@ class _NaviBarState extends State<NaviBar> {
   final List<String> _pages = [
     AppRoutesName.homelayout,
     AppRoutesName.Trivia,
-    AppRoutesName.Notifications,
+    AppRoutesName.Educational,
     AppRoutesName.LeadboardScore,
     AppRoutesName.SettingsBar,
   ];
@@ -40,7 +40,7 @@ class _NaviBarState extends State<NaviBar> {
 
           Icon(Icons.home, size: 30, color: Colors.white),
           Icon(Icons.quiz_outlined, size: 30, color: Colors.white),
-          Icon(Icons.notifications, size: 30, color: Colors.white),
+          Icon(Icons.cast_for_education_outlined, size: 30, color: Colors.white),
           Icon(Icons.leaderboard, size: 30, color: Colors.white),
           Icon(Icons.settings, size: 30, color: Colors.white),
         ],
