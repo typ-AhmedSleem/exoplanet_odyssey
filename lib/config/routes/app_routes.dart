@@ -20,6 +20,7 @@ import 'package:exoplanet_odyssey/features/home/views/home/views/trivia/quition_
 import 'package:exoplanet_odyssey/features/home/views/home/notifications/notification.dart';
 import 'package:exoplanet_odyssey/features/onboarding/onboarding_view.dart';
 import 'package:exoplanet_odyssey/features/splash/splash_view.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
 class AppRoutesName {
@@ -77,7 +78,14 @@ class AppRoute {
         );
       case AppRoutesName.Trivia:
         return MaterialPageRoute(
-          builder: (context) => const Trivia(),
+          builder: (context) {
+            final loggedIn = FirebaseAuth.instance.currentUser != null;
+            if (loggedIn) {
+              return const Trivia();
+            } else {
+              return const LoginView();
+            }
+          },
         );
       case AppRoutesName.Educational:
         return MaterialPageRoute(
