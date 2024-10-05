@@ -57,8 +57,8 @@ class _LoginViewState extends State<LoginView> {
                         mainAxisSize: MainAxisSize.min,
                         children: [
                           const HeaderText(
-                            firstLine: 'Welcome',
-                            secondLine: 'Back',
+                            firstLine: 'Login',
+                            secondLine: '',
                           ),
                           SizedBox(
                             height: widgetHeight(context: context, height: 200),

@@ -5,7 +5,6 @@ import 'package:exoplanet_odyssey/features/widgets/information_card.dart';
 import 'package:exoplanet_odyssey/features/widgets/navigation_bar.dart';
 import 'package:flutter/material.dart';
 
-
 class Trivia extends StatelessWidget {
   const Trivia({super.key});
 
@@ -15,7 +14,12 @@ class Trivia extends StatelessWidget {
       backgroundColor: Colors.black,
       appBar: PreferredSize(
           preferredSize: const Size.fromHeight(150),
-          child: AppbarScreen(text1: 'Let’s answare', text2: 'Q&A Polls',imagebackgrond: 'assets/images/StockCake-Celestial Cosmic Voyage_1727724580.jpg',)),
+          child: AppbarScreen(
+            text1: 'Challenge',
+            text2: 'yourself in Trivia',
+            imagebackgrond:
+                'assets/images/StockCake-Celestial Cosmic Voyage_1727724580.jpg',
+          )),
       body: Padding(
         padding: const EdgeInsets.all(20.0),
         child: ListView(
@@ -23,7 +27,8 @@ class Trivia extends StatelessWidget {
             const InformationCard(
               description:
                   ' Here, you have the power to ask, answer,and voice your \n thoughts on  a wide range of topics. Engage with our community and gain insights through collective wisdom.',
-              title: 'What you get here?', icon:  Icons.library_books_outlined,
+              title: 'What you get here?',
+              icon: Icons.library_books_outlined,
             ),
             buildContentCard(
               imagePath:
@@ -52,11 +57,10 @@ class Trivia extends StatelessWidget {
                 Navigator.pushNamed(context, AppRoutesName.StarsAq);
               },
             ),
-
           ],
         ),
       ),
-      bottomNavigationBar:  NaviBar(currentIndex: 1),
+      bottomNavigationBar: NaviBar(currentIndex: 1),
     );
   }
 }

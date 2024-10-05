@@ -40,7 +40,7 @@ class HomeLayout extends StatelessWidget {
             buildContentCard(
               imagePath:
                   'assets/images/StockCake-Astronaut Views Galaxy_172772507233333333333.jpg',
-              type: '3d model',
+              type: '3D',
               title: 'Visualize',
               newWidget: () {
                 Navigator.pushNamed(context, AppRoutesName.ModelVisualize);
@@ -48,8 +48,8 @@ class HomeLayout extends StatelessWidget {
             ),
             buildContentCard(
               imagePath: 'assets/images/nasa-Q1p7bh3SHj8-unsplash.jpg',
-              type: 'Insightful',
-              title: 'Q&A Trivia',
+              type: 'Challenge',
+              title: 'Yourself in Trivia',
               newWidget: () {
                 Navigator.pushNamed(context, AppRoutesName.login);
               },
@@ -57,8 +57,8 @@ class HomeLayout extends StatelessWidget {
             buildContentCard(
               imagePath:
                   'assets/images/762da7ba-be15-431c-8c29-162ddffc1793.jpeg',
-              type: 'Easy',
-              title: 'Educational',
+              type: 'Educational',
+              title: 'Resources',
               newWidget: () {
                 Navigator.pushNamed(context, AppRoutesName.Educational);
               },

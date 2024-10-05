@@ -21,7 +21,9 @@ class buildContentCard extends StatelessWidget {
       child: SizedBox(
         height: 180,
         child: GestureDetector(
-          onTap: (){newWidget();},
+          onTap: () {
+            newWidget();
+          },
           child: Stack(
             children: [
               Container(
@@ -30,6 +32,7 @@ class buildContentCard extends StatelessWidget {
                   image: DecorationImage(
                     image: AssetImage(imagePath),
                     fit: BoxFit.cover,
+                    opacity: 0.5,
                   ),
                 ),
               ),
@@ -60,14 +63,12 @@ class buildContentCard extends StatelessWidget {
               Positioned(
                 right: 14,
                 bottom: 20,
-                child:
-                   Icon(
-                    Icons.arrow_forward,
-                    color: Colors.white,
-                    size: 25,
-                  ),
+                child: Icon(
+                  Icons.arrow_forward,
+                  color: Colors.white,
+                  size: 25,
                 ),
-
+              ),
             ],
           ),
         ),
