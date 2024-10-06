@@ -49,8 +49,8 @@ class AppRoutesName {
   static const String LevelTow = 'LevelTow';
   static const String LevelThree = 'LevelThree';
   static const String Levelfour = 'Levelfour';
-  static const String EducationalCard='EducationalCard';
-  static const String YoutubeVideoPlayer='YoutubeVideoPlayer';
+  static const String EducationalCard = 'EducationalCard';
+  static const String YoutubeVideoPlayer = 'YoutubeVideoPlayer';
 }
 
 class AppRoute {
@@ -88,13 +88,13 @@ class AppRoute {
             if (loggedIn) {
               return const Trivia();
             } else {
-              return const LoginView();
+              return const LoginPage();
             }
           },
         );
       case AppRoutesName.Educational:
         return MaterialPageRoute(
-          builder: (context) =>  Educational(),
+          builder: (context) => Educational(),
         );
       case AppRoutesName.SettingsBar:
         return MaterialPageRoute(
@@ -149,9 +149,8 @@ class AppRoute {
         );
       case AppRoutesName.YoutubeVideoPlayer:
         return MaterialPageRoute(
-          builder: (context) =>  YoutubeVideoPlayer(),
+          builder: (context) => YoutubeVideoPlayer(),
         );
-
 
       default:
         return MaterialPageRoute(
